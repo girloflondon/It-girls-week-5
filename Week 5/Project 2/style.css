@@ -1,0 +1,108 @@
+/* **Создать волшебную фотогалерею.**
+Ты работаешь в волшебном музее и должна создать волшебную фотогалерею из изображений различных волшебных предметов. Твоя задача - создать эту галерею с использованием CSS и позиционировать изображения таким образом, чтобы они выглядели красиво и привлекательно.
+
+Инструкции:
+
+- Создай HTML-разметку для страницы, на которой будет размещаться галерея. Добавь заголовок, навигационное меню и контейнер, в котором будут располагаться изображения.
+- Скачай изображения волшебных предметов (например, волшебные палочки, ковры-самолеты, зелья и т.д.) и сохраните их в папке с проектом.
+- Используй CSS, чтобы задать стиль для заголовка, навигационного меню и контейнера с изображениями.
+- Отобрази изображения в контейнере, используя свойства позиционирования. Изображения должны быть расположены таким образом, чтобы они не перекрывали друг друга и имели одинаковые отступы между собой.
+- Добавь хотя бы один эффект при наведении мыши на изображения в галерее, например, увеличение изображения, изменение его цвета или появление всплывающей подсказки.
+- После того, как ты закончишь проект, проверь его на различных устройствах и браузерах, чтобы убедиться, что он выглядит хорошо и корректно отображается.
+
+Помни, что волшебство должно быть не только в изображениях, но и в коде, поэтому не забудь про использование комментариев и организацию своего CSS-кода. */
+
+* {
+  font-family: Gill Sans, Helvetica, sans-serif;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f5b700;
+  background-size: 75px;
+  background-image: url("./images/magic_wand_background.png");
+}
+
+/* Заголовок и меню */
+
+h1 {
+  padding: 7vh 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+a {
+  display: flex;
+  color: #fff;
+}
+
+header {
+  background-color: #dc0073;
+  opacity: 0.9;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 75vw;
+  border-radius: 5px;
+  background-color: #dc0073;
+}
+
+.menu-button {
+  padding: 30px 5vw;
+}
+
+.menu-button > p:hover,
+.menu-button:hover {
+  background-color: #008bf8;
+}
+
+.menu-button:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-arrow {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+/* Контейнер с изображениями */
+
+.main {
+  margin: 50px auto;
+}
+
+/* Изображения */
+
+.gallery-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 100px;
+}
+
+.gallery-items > img {
+  max-width: 300px;
+  object-fit: cover;
+  margin: 30px;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+
+/* Настройки hover для изображений и описаний */
+
+.gallery-items > img:hover {
+  display: block;
+  margin: 30px auto;
+  min-width: 40%;
+  padding: 0 250px;
+}
